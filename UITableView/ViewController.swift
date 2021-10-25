@@ -11,6 +11,7 @@ import UserNotifications
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
     var contacts = [
                 "Ajo",
                 "Alen",
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
                 "Sreerag",
                 "Sarath"
     ]
+    
     var number = [
         "+91 7558 042 864",
         "+91 9496 250 520",
