@@ -12,46 +12,46 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var contacts = [
-        "Sarath",
-        "Ajo",
-        "Junais",
-        "Mubashir",
-        "Sanath",
-        "Junaid",
-        "Shabith",
-        "Nihal",
-        "Shyamjith",
-        "Nasaf",
-        "Harley",
-        "Sreerag",
-        "Arshad",
-        "Alen",
-        "Sinan",
-        "Sooraj",
-        "Nijin",
-        "Favas",
-        "Jithu"
+                "Ajo",
+                "Alen",
+                "Arshad",
+                "Favas",
+                "Harley",
+                "Jithu",
+                "Junaid",
+                "Junais",
+                "Mubashir",
+                "Nasaf",
+                "Nihal",
+                "Nijin",
+                "Sanath",
+                "Shabith",
+                "Shyamjith",
+                "Sinan",
+                "Sooraj",
+                "Sreerag",
+                "Sarath"
     ]
     var number = [
-        "+91 7558 042864",
-        "+91 9496 250520",
-        "+91 9774 531501",
-        "+91 3784 367434",
-        "+91 3893 929733",
-        "+91 9328 903939",
-        "+91 9308 439093",
-        "+91 9034 903929",
-        "+91 9034 903929",
-        "+91 9034 903929",
-        "+91 9034 903929",
-        "+91 9034 903929",
-        "+91 9774 531501",
-        "+91 9774 531501",
-        "+91 9774 531501",
-        "+91 9774 531501",
-        "+91 9774 531501",
-        "+91 9774 531501",
-        "+91 9774 531501"
+        "+91 7558 042 864",
+        "+91 9496 250 520",
+        "+91 9774 531 501",
+        "+91 3784 367 434",
+        "+91 9893 929 733",
+        "+91 9328 903 939",
+        "+91 9308 439 093",
+        "+91 9034 903 929",
+        "+91 9034 903 929",
+        "+91 9034 903 929",
+        "+91 9034 903 929",
+        "+91 9034 903 929",
+        "+91 9774 531 501",
+        "+91 9774 531 501",
+        "+91 9774 531 501",
+        "+91 9774 531 501",
+        "+91 9774 531 501",
+        "+91 9774 531 501",
+        "+91 9774 531 501"
     ]
     override func viewDidLoad() {
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -68,7 +68,7 @@ class ViewController: UIViewController {
         
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound]) { granted, error in
-                    }
+        }
         
         //        Content for Notification
         let content = UNMutableNotificationContent()
@@ -84,25 +84,16 @@ class ViewController: UIViewController {
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         
         
-//        create request'
+        //        create request'
         let uuIdString = UUID().uuidString
         let request = UNNotificationRequest (identifier: uuIdString, content: content, trigger: trigger)
         
         
-//        add request
+        //        add request
         center.add(request) { Error in}
     }
     
-
     
-    
-    
-
-    
-
-    
-    
-
 }
 
 
@@ -114,7 +105,7 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath)
         cell.textLabel?.text = contacts[indexPath.row]
-         
+        
         return cell
     }
     
